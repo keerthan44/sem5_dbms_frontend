@@ -12,6 +12,13 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import NoPage from '../NoPage';
+
+function onClickHandleError(){
+  return(
+    <NoPage/>
+    );
+}
 
 function Copyright(props) {
   return (
@@ -25,7 +32,6 @@ function Copyright(props) {
     </Typography>
   );
 }
-
 // TODO remove, this demo shouldn't need to reset the theme.
 
 const defaultTheme = createTheme();
@@ -83,18 +89,21 @@ export default function SignIn() {
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
             />
-            <Button
+            <Button 
+              onClick={onClickHandleError} 
               type="submit"
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
+              
               Sign In
             </Button>
             <Grid container>
               <Grid item xs>
                 <Link href="#" variant="body2">
                   Forgot password?
+
                 </Link>
               </Grid>
               <Grid item>
