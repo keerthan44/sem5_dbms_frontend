@@ -1,9 +1,10 @@
 import './App.css';
-import SignIn from "./views/SignUpView"
+import SignIn from "./views/SignInView"
+import Router from "./views/router.js"
 
 function App() {
   return (
-    <SignIn />
+    <Router />
   );
 }
 
